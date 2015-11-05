@@ -1,0 +1,331 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: white;
+}
+
+.jumbotron {
+	background-color: #181919;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#bannerA {
+	margin-bottom: 40px;
+}
+
+#bannerB {
+	margin-bottom: 40px;
+}
+
+#homeContainer {
+	margin-bottom: 200px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+	 #navRight {
+		text-align: center;
+	 	float: none !important;
+	 }
+
+	 .navbar-nav li {
+	 	margin-top: 20px !important;
+	 	margin-bottom: 20px;
+	 }
+
+	 .navbar-nav > li > a {
+	 	line-height: 10px !important;
+	 }
+
+	 #shirt-description {
+	 	padding: 0 20px !important;
+	 }
+
+	 #shirt-carousel {
+	 	margin-left: 0;
+	 }
+
+	 #faq-title {
+	 	font-size: 2em;
+	 }
+}
+
+@media screen and (max-width: 325px) {
+	.navbar-header div {
+		width: 50%;
+	}
+
+	.quantity-prod {
+		width: 50px;
+	}
+
+}
+
+#navBar {
+	background-color: #181919;
+}
+
+.navbar-brand {
+	height: 120px;
+}
+
+.navbar {
+	border: none;
+	border-radius: 0px;
+	border-bottom: 2px solid #474848;
+	margin-bottom: 0;
+}
+
+.navbar-nav li {
+	margin-top: 10%;
+	font-size: 1.15em;
+}
+
+.navbar-toggle {
+	margin-top: 4%;
+}
+
+#introBanner {
+	margin-top: 100px;
+	height: 330px;
+	background-image: url('../img/02.png');
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.carousel-indicators li {
+	background-color: #181919;
+}
+
+.carousel-indicators .active {
+	background-color: black;
+}
+
+#shopping-cart {
+	padding: 8px 0;
+	text-align: center;
+	margin-top: 120px;
+	font-size: 20px;
+	background-color: #e6e6e6;
+}
+
+#shopping-cart a {
+	color: #181919;
+}
+
+#navRight a {
+	color: #dedede;
+}
+
+#navRight a:hover {
+	color: #444;
+}
+
+#shirt-container {
+	margin: 0 0;
+	padding: 0 0;
+}
+
+#shirt-description {
+	color: #919191;
+	padding: 0 0;
+	padding-top: 40px;
+	margin: 6.5% 4%;
+}
+
+#product-description {
+	margin-bottom: 15px;
+}
+
+#product-description > h4 {
+	line-height: 150%;
+}
+
+#shirt-description > p {
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+	font-size: 18px;
+}
+
+.vignette {
+	-webkit-box-shadow: inset 0px 0px 85px rgba(0,0,0,0.4);
+	-moz-box-shadow:    inset 0px 0px 85px rgba(0,0,0,0.4);
+	box-shadow:         inset 0px 0px 85px rgba(0,0,0,0.4);
+}
+
+.thumbnail {
+	display: inline-block;
+}
+
+#button-group button {
+	line-height: 40px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+#atc-button {
+	margin-bottom: 5px;
+}
+
+.activeSize {
+	background-color: #242626;
+	color: #e7e6e6;
+}
+
+.activeSize:hover {
+	color:white;
+}
+
+/* Gradient color1 - color2 - color1 */
+
+hr.style-one {
+    border: 0;
+    height: 1px;
+    background: #666;
+    background-image: linear-gradient(to right, #e6e6e6, #999, #e6e6e6);
+}
+
+.image-container {
+    float: left;
+    overflow: hidden;
+}
+
+
+#features {
+	margin-top: 20px;
+}
+
+#features h5 {
+	line-height: 20px;
+}
+
+#footer {
+	padding-top: 30px;
+	height: 150px;
+	background-color: #181919;
+	margin: 0 0;
+	color: #aaa;
+	line-height: 25px;
+}
+
+#footer-copy {
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.modal-body {
+	color: #181919;
+	text-align: left;
+}
+
+#success-text {
+	margin-bottom: 610px;
+	text-align: center;
+}
+
+#blurb {
+	color: black;
+	letter-spacing: -1px;
+	margin-bottom: -18px;
+}
+
+/* firefox fieldset hack */
+
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
+
+#organic-cotton-link {
+	color: black;
+	text-decoration: underline;
+}
+
+#water-based-link {
+	color: black;
+	text-decoration: underline;
+}
+
+#size-chart-link {
+	color: #919191;
+}
+
+.containerMargin {
+	margin-top: 170px;
+}
+
+#faq {
+	font-size: 1.3em;
+}
+
+/* ng Anim */
+
+.faq-answer.ng-hide{
+	-webkit-transition:0.5s linear all;
+	-moz-transition:0.5s linear all;
+	-o-transition:0.5s linear all;
+	transition:0.5s linear all;
+	opacity:0;
+}
+
+.faq-answer.ng-hide-add,
+.faq-answer.ng-hide-remove{
+	display:block!important;
+	opacity:1;
+}
+
+.faq-answer.ng-leave {
+  -webkit-animation:0.5s my_animation;
+  -moz-animation:0.5s my_animation;
+  -o-animation:0.5s my_animation;
+  animation:0.5s my_animation;
+}
+
+.faq-answer.ng-hide-remove,
+.faq-answer.ng-hide-add {
+  /* remember, the .hg-hide class is added to element
+     when the active class is added causing it to appear
+     as hidden. Therefore set the styling to display=block
+     so that the hide animation is visible */
+  display:block!important;
+}
+
+.faq-answer.ng-hide-add {
+  -webkit-animation:0.5s hide;
+  -moz-animation: 0.5s hide;
+  -o-animation: 0.5s hide;
+  animation:0.5s hide;
+}
+
+@keyframes hide {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+@-webkit-keyframes hide {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+.faq-answer.ng-hide-remove {
+  -webkit-animation:0.5s show;
+  -moz-animation:0.5s show;
+  -o-animation:0.5s show;
+  animation:0.5s show;
+}
+
+@keyframes show {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+@-webkit-keyframes show {
+  from { opacity:0; }
+  to { opacity:1; }
+}

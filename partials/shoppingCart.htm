@@ -1,0 +1,99 @@
+<div class="container" style='height: 855px;'>
+    <div class="row" style='text-align: center; margin-top: 150px; margin-bottom: 80px;'>
+            <h4 style='line-height: 35px;'>Thanks for shopping at Retro Tee Co.<br>
+            This is your secure shopping cart. Here you can edit items, go back to the store, clear the cart, or check out using PayPal.</h4>
+        </p>
+    </div>
+
+
+    <div class="col-md-12 content-backcolor">
+        <div class="col-xs-12 col-md-8">
+
+            <!-- items -->
+            <table class="table table-responsive table-bordered tab-shop">
+
+                <!-- header -->
+                <tr class="well">
+                    <td><b>Item</b></td>
+                    <td><b>Quantity</b></td>
+                    <td><b>Price</b></td>
+                </tr>
+
+                <!-- empty cart message -->
+                <tr ng-hide="cart.getTotalCount() > 0" >
+                    <td class="tdCenter" colspan="4">
+                        Your cart is empty.
+                    </td>
+                </tr>
+
+                <!-- cart items -->
+                <tr ng-repeat="item in cart.items | orderBy:'name'">
+                    <td>
+                        <img ng-src=""></img>
+                        {{item.name}} {{item.size}}
+                    </td>
+                    <td class="tdCenter">
+                      <div class="input-append">
+                        <!-- use type=tel instead of  to prevent spinners -->
+                        <input
+                            class="col-md-2 col-xs-6 quantity-prod" type="tel" 
+                            ng-model="item.quantity" 
+                            ng-change="cart.saveItems()" />
+                      </div>
+                    </td>
+                    <td class="tdRight">{{item.price * item.quantity | currency}}</td>
+                </tr>
+
+                <!-- footer -->
+                <tr class="well">
+                    <td><b>Total</b></td>
+                    <td class="tdCenter"><b>{{cart.getTotalCount()}}</b></td>
+                    <td class="tdRight"><b>{{cart.getTotalPrice() | currency}}</b></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- buttons -->
+        <div class="col-xs-12 col-md-4">
+            <p class="text-info">
+                <button 
+                    class="btn btn-block" 
+                    onclick="window.location.href='index.html'">
+                    <i class="icon-chevron-left" /> back to store
+                </button>
+                <button 
+                    class="btn btn-block btn-danger" 
+                    ng-click="cart.clearItems()" 
+                    ng-disabled="cart.getTotalCount() < 1" >
+                    <i class="icon-trash icon-white" /> clear cart
+                </button>
+            </p>
+
+            <p class="text-info">
+                <button
+                    class="btn btn-block btn-primary"
+                    ng-click="cart.checkout('PayPal')"
+                    ng-disabled="cart.getTotalCount() < 1"
+                    analytics-on="click"
+                    analytics-event="checkout-paypal"
+                    analytics-label="Checkout With Paypal Blue Button">
+                    <i class="icon-ok icon-white" /> check out using PayPal
+                </button>
+                
+            </p>
+
+            <p class="text-info">
+                <button 
+                    class="btn btn-block btn-link"
+                    ng-click="cart.checkout('PayPal')"
+                    ng-disabled="cart.getTotalCount() < 1" 
+                    analytics-on="click"
+                    analytics-event="checkout-paypal"
+                    analytics-label="Checkout With Paypal Paypal Button">
+                    <img src="img/btn_xpressCheckout.gif" alt="checkout PayPal"/>
+                </button>     
+                  
+            </p>
+        </div>
+    </div>
+</div>

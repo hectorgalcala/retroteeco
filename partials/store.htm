@@ -1,0 +1,185 @@
+<div ng-controller='AdminController'>
+
+  <!-- ng-repeat start -->
+  <div class="container-fluid" id="shirt-container" ng-repeat='key in pagedItems[currentPage]'>
+
+    <div class="col-xs-12 col-md-7">
+
+      <div class="row carousel slide" data-ride="carousel" id="shirtCarousel" style='margin-top: 120px;'>
+        
+        <div class='carousel-inner image-container' role='listbox' id='img-container'>
+          <div class="item active landscape"> <img class="img-responsive" src="img/NSB/01.jpg"> </div>
+          <div class="item landscape"> <img class="img-responsive" src="img/NSB/02.jpg"/> </div>
+          <div class="item landscape"> <img class="img-responsive" src="img/NSB/03.jpg"/> </div>
+          <div class="item landscape"> <img class="img-responsive" src="img/NSB/04.jpg"/> </div>
+          <div class="item landscape"> <img class="img-responsive" src="img/NSB/05.jpg"/> </div>
+        </div>
+
+      <a class="carousel-control left"  ng-click="slide('prev')"><span class="icon-prev"></span></a>
+      <a class="carousel-control right" ng-click="slide('next')"> <span class="icon-next"></a>
+
+      </div>
+
+    </div>
+
+    <div class='col-xs-11 col-md-4' id="shirt-description">
+      <div class='row'>
+        <h3 id='blurb'>Premium Retro Tee Made in USA</h3>
+        <h2>{{ key.name }}</h2>
+      </div>
+      <div class='row' id='product-description'>
+        <h4 >{{ key.description }}</h4>
+      </div>
+      <div class='row' id='features'>
+        <img src='img/cotton.png'></img>
+        <h5> <a href="" data-toggle="modal" data-target="#organic-cotton" id='organic-cotton-link'>100% Certified Organic Cotton</a> and <a href="" data-toggle="modal" data-target="#water-based" id='water-based-link'>water-based print</a> for a soft feel
+        <div class='modal fade' role='dialog' id='organic-cotton'>
+          <div class='modal-dialog'>
+            <div class='modal-content'>
+              <div class='modal-header'>
+                <h3>Organic Cotton vs Non-Organic</h3>
+              </div>
+              <div class='modal-body'>
+                <table class='table-responsive'>
+                <table class='table table-hover table-bordered'>
+                  <thead>
+                    <tr>
+                      <th>  </th>
+                      <th>Organic</th>
+                      <th>Conventional</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Seeds</td>
+                      <td>GMO-Free; untreated</td>
+                      <td>Treated with fungicides, insecticides. Possible genetic modification.</td>
+                    </tr>
+                    <tr>
+                      <td>Soil</td>
+                      <td>Crop rotation; cover cropping, better retention of moisture, higher concentrations of organic matter; animal manure additions</td>
+                      <td>Synthetic fertilizers, loss of soil due to monocrop culture, intensive irrigation</td>
+                    </tr>
+                    <tr>
+                      <td>Weed &amp; Insect control</td>
+                      <td>Beneficial insects and 'trap crops' used; flame weeding, and cultivation; Border management of vegetation (to increase population of native beneficials); use of certain bio pesticides such as bacteria, virus' and fungal insect pathogens</td>
+                      <td>Aerial spraying for insecticides used &amp; pestiides; 9 of the most commonly pesticides are known cancer-causing agents</td>
+                    </tr>
+                    <tr>
+                      <td>Harvesting</td>
+                      <td>Natural defoliation from freezing temperatures or through the use of water management</td>
+                      <td>Defoliation induced with toxic chemicals</td>
+                    </tr>
+                    <tr>
+                      <td>Whitening</td>
+                      <td>Safe peroxide is used</td>
+                      <td>Chloride bleaching is used; toxic byproducts produced and released into environment in the process</td>
+                    </tr>
+                    <tr>
+                      <td>Finishing</td>
+                      <td>Soft scour in warm water with soda asj for Ph of 7.5-7.8</td>
+                      <td>Hot water, synthetic surfactants, additional chemicals (sometimes formaldehyde)</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </table>
+              </div>
+              <div class='modal-footer'>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='modal fade' role='dialog' id='water-based'>
+          <div class='modal-dialog'>
+            <div class='modal-content'>
+              <div class='modal-header'>
+                <h3>What is water based ink?</h3>
+              </div>
+              <div class='modal-body'>
+                <p>Water based ink is a special type of decorative ink that literally soaks into the fabric instead of sitting on top of it, as plastisol does. Since the fabric isn’t compromised by the ink, garments are left with a super soft and natural feeling print. You literally won’t even feel the print, which is one of the many benefits of water based inks.</p>
+              </div>
+              <div class='modal-footer'>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>Proudly Made in USA
+        <br><strong>Free US shipping in 3 days</strong>
+        <br>No international shipping available at this time</h5>
+      </div>
+      <hr class='style-one'>
+      <div class='row' id="sizes">
+        <div class='col-xs-2 col-md-1'>
+          <h4><a href="" data-toggle="modal" data-target="#size-chart" id='size-chart-link'>Size</a></h4>
+          <div class='modal fade' role='dialog' id='size-chart'>
+            <div class='modal-dialog'>
+              <div class='modal-content'>
+                <div class='modal-header'>
+                  <h3>Size Chart</h3>
+                </div>
+                <div class='modal-body'>
+                  <table class='table-responsive'>
+                  <table class='table table-hover table-bordered'>
+                    <thead>
+                      <tr>
+                        <th>Size Chart</th>
+                        <th>Small Size</th>
+                        <th>Medium Size</th>
+                        <th>Large Size</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Front Body Length (from hips)</td>
+                        <td>27 ½</td>
+                        <td>28 ½</td>
+                        <td>29 ½</td>
+                      </tr>
+                      <tr>
+                        <td>Chest Flat Measurement (1" below armhole)</td>
+                        <td>18</td>
+                        <td>20</td>
+                        <td>22</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </table>
+                </div>
+                <div class='modal-footer'>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-3 col-md-3 col-lg-3" id='button-group'>
+          <button ng-repeat='size in sizes' class='thumbnail' ng-click="selectSize($index)" ng-class="{activeSize: $index == selected}" ng-disabled="{{!key.isSizeInStock[size]}}">{{ size }}</button>
+        </div>
+        <div class='col-xs-7 col-md-7 col-lg-7'>
+          <a type='button' id='atc-button' class='btn btn-success' ng-click="cart.addItem(key.code, key.name, findActive(), key.price, 1)" ng-attr-title="{{cart.cartTitle()}}">Add to cart</a>
+          <button type='button' class='btn btn-default' ng-click="cart.clearItems()" ng-disabled="cart.getTotalCount() < 1">Clear cart</button>
+          <a href="index.html#/cart" style='color:black;'><button type='button' class='btn btn-default' ng-show="cart.getTotalCount() >= 1" analytics-on="click" analytics-event="shopping-cart" analytics-label="Bottom Shopping Cart">Checkout</button></a>
+        </div>
+      </div>
+
+      <hr class='style-one'>
+
+      <div class='row' id="amounts">
+        <div class='col-xs-3 col-md-2'>
+          <h4>Price</h4>
+        </div>
+        <div class='col-xs-3 col-md-2'>
+          <h4><b>{{key.price | currency}}</b></h4>
+        </div>
+        <div class='col-xs-3 col-md-2'>
+          <h4>Quantity</h4>
+        </div>
+        <div class='col-xs-3 col-md-2'>
+          <h4 id='amtTotal' ng-show="cart.getTotalCount(product.code) > 0">{{ cart.getTotalCount() }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
