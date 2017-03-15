@@ -70,11 +70,16 @@ body {
 }
 
 #navBar {
-	background-color: #181919;
+	/*background-color: #181919;*/
+	background-color: #000000;
 }
 
 .navbar-brand {
 	height: 120px;
+}
+
+div.navbar-header > div > a > img {
+	height: 5.87em;
 }
 
 .navbar {
