@@ -70,7 +70,6 @@ body {
 }
 
 #navBar {
-	/*background-color: #181919;*/
 	background-color: #000000;
 }
 
@@ -79,7 +78,7 @@ body {
 }
 
 div.navbar-header > div > a > img {
-	height: 5.87em;
+	height: 5.86em;
 }
 
 .navbar {

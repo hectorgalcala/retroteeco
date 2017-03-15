@@ -2,7 +2,7 @@ storeApp.controller('AdminController', function ($scope, $filter) {
     $scope.isActive = false;
     $scope.sections = [
         {name: 'List View', class: "cbp-vm-list"}];
-    
+
     $scope.toggleVis = function () {
         $('ul li:nth-child(2)').slideToggle('slow');
     }
@@ -96,7 +96,7 @@ storeApp.controller('AdminController', function ($scope, $filter) {
 
 function store() {
     this.products = [
-          { num: 1, code: 'MD1', category: 'graphictee', name: 'Newsies at Skeeter\'s Branch', src: "../img/NSB/01.jpg", isSizeInStock: {S: true, M: true, L: true}, description: 'Our Model 1 portrays a print from the famous american photographer Lewis Wickes Hine. Using his camera as a tool for social reform, he traveled around the country to show the condition in which children were working. His photographs helped bring attention to this matter and change child labor laws in the United States.', price: 29.00, cal: 10 }];
+          { num: 1, code: 'MD1', category: 'graphictee', name: 'Newsies at Skeeter\'s Branch', src: "../img/01.jpg", isSizeInStock: {S: true, M: true, L: true}, description: 'Our Model 1 portrays a print from the famous american photographer Lewis Wickes Hine. Using his camera as a tool for social reform, he traveled around the country to show the condition in which children were working. His photographs helped bring attention to this matter and change child labor laws in the United States.', price: 29.00, cal: 10 }];
 
 }
 
@@ -109,6 +109,6 @@ store.prototype.getProduct = function (code) {
         if (this.products[i].code == code)
             return this.products[i];
     }
-    
+
     return null;
 }
